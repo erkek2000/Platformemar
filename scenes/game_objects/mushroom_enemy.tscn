@@ -275,6 +275,7 @@ size = Vector2(67, 60)
 size = Vector2(80, 61)
 
 [node name="Mushroom Enemy" type="RigidBody2D"]
+collision_mask = 257
 script = ExtResource("1_p5hpt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

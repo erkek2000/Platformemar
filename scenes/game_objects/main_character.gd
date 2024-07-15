@@ -9,9 +9,11 @@ const JUMP_VELOCITY = -900.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jump_count = 0
 
+
 func hurt(x):	
 	velocity.y = JUMP_VELOCITY
 	velocity.x = x
+	#animating here doesnt work.
 	sprite_2d.animation = "hurt"
 
 func jump():
@@ -20,7 +22,7 @@ func jump():
 
 func _physics_process(delta):
 	
-	
+	# Handle all animations
 	if is_on_floor():
 		jump_count = 0
 		if (velocity.x > 1 || velocity.x < -1):
@@ -35,17 +37,19 @@ func _physics_process(delta):
 			sprite_2d.animation = "double jumping"
 		else:
 			sprite_2d.animation = "falling"
+		
+	if not Input.is_action_pressed("Move Down"):
+		set_collision_mask_value(9, true)
+	else:
+		set_collision_mask_value(9, false)
 			
-	
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and jump_count < 2:
-		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_pressed("Jump") and jump_count < 2:			
+		velocity.y = JUMP_VELOCITY	
 		jump_count += 1
 		if jump_count == 2:
 			spawn_particle()
-		
-		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -61,7 +65,7 @@ func _physics_process(delta):
 		sprite_2d.flip_h = true
 	elif velocity.x > 0:
 		sprite_2d.flip_h = false
-		
+	
 func spawn_particle():
 	var particle_node = particle.instantiate()
 	particle_node.position = position
