@@ -1073,6 +1073,7 @@ particle = ExtResource("13_m5a7m")
 
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/Player"]
 position = Vector2(3, 14)
+limit_bottom = 730
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 

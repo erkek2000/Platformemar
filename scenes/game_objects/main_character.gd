@@ -19,6 +19,7 @@ func hurt(x):
 func jump():
 	velocity.y = JUMP_VELOCITY
 	spawn_particle()
+	jump_count = 1
 
 func _physics_process(delta):
 	
