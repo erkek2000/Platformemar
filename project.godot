@@ -14,6 +14,7 @@ config/name="Platformemar"
 run/main_scene="res://scenes/menu/main_menu.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+config/tags=PackedStringArray("memo")
 
 [autoload]
 
