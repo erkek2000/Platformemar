@@ -1,7 +1,7 @@
 [gd_scene load_steps=46 format=3 uid="uid://bi3tu2xfs7b68"]
 
 [ext_resource type="Texture2D" uid="uid://bm3v8s3evxt0r" path="res://assets/character/main/Jump (32x32).png" id="1_a52iq"]
-[ext_resource type="Script" path="res://scenes/game_objects/main_character.gd" id="1_yv3fp"]
+[ext_resource type="Script" uid="uid://cqdfctioqbtf4" path="res://scenes/game_objects/main_character.gd" id="1_yv3fp"]
 [ext_resource type="Texture2D" uid="uid://bn16435d48ui0" path="res://assets/character/main/Double Jump (32x32).png" id="2_2wqot"]
 [ext_resource type="Texture2D" uid="uid://ifshptntd7fk" path="res://assets/character/main/Fall (32x32).png" id="2_am8ls"]
 [ext_resource type="Texture2D" uid="uid://dm7341i4mu5ba" path="res://assets/character/main/Idle (32x32).png" id="3_fv7se"]
