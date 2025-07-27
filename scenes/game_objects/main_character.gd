@@ -40,13 +40,12 @@ func _physics_process(delta):
 			sprite_2d.animation = "falling"
 		
 	if not Input.is_action_pressed("Move Down"):
-		set_collision_mask_value(9, true)
+		set_collision_mask_value(2, true)
 	else:
-		set_collision_mask_value(9, false)
+		set_collision_mask_value(2, false)
 			
-
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and jump_count < 2:			
+	if Input.is_action_just_pressed("Jump") and jump_count < 2:
 		velocity.y = JUMP_VELOCITY	
 		jump_count += 1
 		if jump_count == 2:

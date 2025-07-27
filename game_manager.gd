@@ -22,4 +22,3 @@ func decrease_health():
 			
 	if (lives == 0):
 		get_tree().reload_current_scene()
-
